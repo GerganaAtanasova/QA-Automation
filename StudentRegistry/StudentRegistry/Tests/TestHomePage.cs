@@ -39,6 +39,13 @@ namespace StudentRegistry.Tests
         
         }
 
+        [Test]
+        public void Test_StrudentsCount()
+        {
+            var homePage = new HomePage(driver);
 
+            homePage.Open();
+            Assert.IsTrue(homePage.GetStudentsCount() > 0);
+        }
     }
 }
